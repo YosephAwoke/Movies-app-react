@@ -1,13 +1,14 @@
 
 import './App.css'
 import MovieCard from './componenets/MovieCard'
+import Home from './pages/Home';
 
 function App() {
   
 
   return (
     <>
-      <MovieCard movie={{title: "Jos Movie", release_year: "2023"}} />
+      <Home/>
     </>
   );
 }
