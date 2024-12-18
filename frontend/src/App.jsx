@@ -4,10 +4,11 @@ import "./css/App.css";
 import Home from "./pages/Home";
 import Favorites from "./pages/Favorites";
 import NavBar from "./components/NavBar";
+import { MovieProvider } from "./context/MovieContext";
 
 function App() {
   return (
-    <div>
+    <MovieProvider>
       <NavBar />
 
       <main className="main-content">
@@ -18,7 +19,7 @@ function App() {
         <Route path='/' element={<Home />}></Route> */}
         </Routes>
       </main>
-    </div>
+    </MovieProvider>
   );
 }
 
