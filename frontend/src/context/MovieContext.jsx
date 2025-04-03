@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect, useContext } from "react";
+import PropTypes from 'prop-types';
 
 const MovieContext = createContext();
 
@@ -40,4 +41,8 @@ export const MovieProvider = ({ children }) => {
   return (
     <MovieContext.Provider value={value}>{children}</MovieContext.Provider>
   );
+};
+
+MovieProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 };

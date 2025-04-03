@@ -1,6 +1,7 @@
 import "../css/MovieCard.css";
 import { useMovieContext } from "../context/MovieContext";
-
+import PropTypes from 'prop-types';
+ 
 function MovieCard({ movie }) {
 
   const { addToFavorites, removeFromFavorites, isFavorites } = useMovieContext();
@@ -35,4 +36,8 @@ function MovieCard({ movie }) {
     </div>
   );
 }
+
+MovieCard.propTypes = {
+  movie: PropTypes.object.isRequired,
+};
 export default MovieCard;
